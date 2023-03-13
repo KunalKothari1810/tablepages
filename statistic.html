@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/903f952fba.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  
+    <header id="site-header" class="header">
+        <div class="">
+            <nav>
+  <div class="logo"><img  src="image/logo (1).png" width="70" height="70px"></div>
+
+  <div class="navbar">
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Store</a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><i class="fa-regular fa-user"></i></a></li>
+    </ul>
+  </div>
+
+  <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+        </div>
+    </header>
+  <section class="homecard">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-2 col-sm-6 cardspace">
+            <div class="card cardheight">
+                <img class="newimg card-img-top img-fluid" src="image/stopwatch.png" alt="Card image cap">
+                
+                <div class="card-block">
+                    <h4 class="card-title text-center cardtext">Practice Timer</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6 cardspace">
+            <div class="card cardheight">
+                <img class="newimg card-img-top img-fluid" src="image/podium.png" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title text-center cardtext">Leader Board</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6 cardspace">
+            <div class="card cardheight">
+                <img class="newimg card-img-top img-fluid" src="image/timer.png" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title text-center cardtext">Competition Timer</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6 cardspace">
+            <div class="card cardheight">
+                <img class="newimg card-img-top img-fluid" src="image/profile-user.png" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title text-center cardtext">My Profile</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6 cardspace">
+            <div class="card cardheight">
+                <img class="newimg card-img-top img-fluid" src="image/active.png" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title text-center cardtext">Notifications</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6 cardspace">
+            <div class="card cardheight">
+                <img class="newimg card-img-top img-fluid" src="image/award.png" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title text-center cardtext">Award Tracking</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  </section>
+  <section class="hometable">
+    <div class="container">
+        <div class="row">
+            <div class="col bg-white box1">
+                <h1 class="awardhead" style="text-align: left; font-weight:bolder; color:#1f4c9d;">STATISTIC</h1>
+                <div style="margin: auto;
+                width: 20%;
+                padding: 10px; font-weight: bolder; color:#B9DCF2">( COMING SOON )</div>
+            </div>
+            </div>
+        </div>
+    </div>
+  </section>
+    <script src="script.js"></script>
+    
+   <script>
+    var xhr = new XMLHttpRequest();
+xhr.open('GET', 'Header.html', true);
+xhr.onreadystatechange = function() {
+    if (this.readyState !== 4) return;
+    if (this.status !== 200) return;
+    document.getElementById('included-content').innerHTML = this.responseText;
+};
+xhr.send();
+
+   </script>
+   <script>
+   const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+          hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-link").forEach((link) =>
+          link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+          })
+        );
+
+   </script>
+</body>
+</html>
